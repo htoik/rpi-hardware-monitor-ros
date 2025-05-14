@@ -25,8 +25,25 @@ colcon build --packages-select rpi-hardware-monitor-ros
 colcon build --symlink-install --packages-select rpi-hardware-monitor-ros
 ```
 
+## Configuration
+
+The node can be configured to monitor specific hardware interfaces with additional parameters like the polling frequency. The default parameters can be modified directly in the configuration file in `rpi_hw_monitor/config/params.yml`. Alternatively, it is possible to pass a custom configuration file to the launcher directly. The config should have the following format:
+
+```yaml
+rpi_hw_monitor:
+  ros__parameters:
+    monitor_flags:
+      cpu : true
+      disk : true
+      network : true
+      power : true
+      temperature : true
+    polling_frequency: 5 # (Hz)
+```
+
 ## Usage
 
 ```bash
-# TODO
+ros2 run rpi_hw_monitor hw_monitor.py
+ros2 launch rpi_hw_monitor hw_monitor_launch.py
 ```

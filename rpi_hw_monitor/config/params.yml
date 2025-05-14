@@ -1,0 +1,9 @@
+rpi_hw_monitor:
+  ros__parameters:
+    monitor_flags:
+      cpu : true
+      disk : true
+      network : true
+      power : true
+      temperature : true
+    polling_frequency: 5
