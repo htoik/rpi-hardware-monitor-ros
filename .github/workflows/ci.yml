@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Conda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          environment-file: scripts/conda-env.yml
+          activate-environment: rpi-hardware-monitor-ros
+      - name: Install pre-commit hooks
+        shell: bash -l {0}
+        run: pre-commit install --install-hooks
+      - name: Run pre-commit against all files
+        shell: bash -l {0}
+        run: pre-commit run --all-files

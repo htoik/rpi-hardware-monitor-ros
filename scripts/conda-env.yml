@@ -2,7 +2,8 @@ name: rpi-hardware-monitor-ros
 channels:
   - conda-forge
 dependencies:
-  - python=3.12
+  - python=3.10
+  # - ros-rolling-desktop
   - pip
   - cmake
   - ninja
@@ -15,3 +16,9 @@ dependencies:
       - pydantic
       - pydantic-core
       - idna>=2.8
+      - pre-commit
+      - black
+      - isort
+      - flake8
+      - ruff
+      - mypy
