@@ -1,0 +1,8 @@
+float32 cpu_usage
+float32 memory_mb
+float32 disk_rx_mb
+float32 disk_tx_mb
+float32 network_rx_mb
+float32 network_tx_mb
+float32 power_consumption
+float32 temperature

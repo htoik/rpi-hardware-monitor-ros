@@ -2,6 +2,7 @@ rpi_hw_monitor:
   ros__parameters:
     monitor_flags:
       cpu : true
+      memory: true
       disk : true
       network : true
       power : true
