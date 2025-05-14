@@ -1,5 +1,7 @@
 # Hardware Monitor ROS2 Node for Raspberry Pi 4
 
+[![CI](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml/badge.svg)](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml)
+
 This repository contains a hardware monitor node that provides statistics about hardware use such as CPU, disk and network utilization, power consumption and temperatures, which are published to the namespace `/hardware-status`.
 
 ## Installation
