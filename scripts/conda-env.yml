@@ -1,6 +1,7 @@
 name: rpi-hardware-monitor-ros
 channels:
   - conda-forge
+  - defaults
 dependencies:
   - python=3.10
   # - ros-rolling-desktop
