@@ -1,29 +1,8 @@
-# Hardware Monitor ROS2 Node for Raspberry Pi 4
+# Hardware Monitor ROS2 Node for RPi4
 
 [![CI](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml/badge.svg)](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml)
 
-This repository contains a hardware monitor node that provides statistics about hardware use such as CPU, RAM, disk and network utilization, power consumption and temperatures, which are published to the namespace `/hardware-status`.
-
-## Installation
-
-```bash
-# (inside your project source directory)
-git clone --recursive https://github.com/htoik/rpi-hardware-monitor-ros rpi-hardware-monitor-ros
-cd rpi-hardware-monitor-ros
-
-# conda (recommended)
-conda env create -f scripts/conda-env.yml
-conda activate rpi-hardware-monitor-ros
-
-colcon build --packages-select rpi_hw_monitor
-```
-
-## Installation (Developer)
-
-```bash
-. scripts/source.sh
-colcon build --symlink-install --packages-select rpi_hw_monitor
-```
+This repository contains a hardware monitor node that provides statistics about hardware use such as CPU, RAM, disk and network utilization, power consumption and temperatures, which are published to the namespace `/hw_status`.
 
 ## Configuration
 
@@ -46,6 +25,26 @@ rpi_hw_monitor:
 ```bash
 ros2 run rpi_hw_monitor hw_monitor.py
 ros2 launch rpi_hw_monitor hw_monitor_launch.py
+```
+
+## Installation
+
+```bash
+# (inside your project source directory)
+git clone --recursive https://github.com/htoik/rpi-hardware-monitor-ros rpi-hardware-monitor-ros
+cd rpi-hardware-monitor-ros
+
+colcon build --packages-select rpi_hw_monitor
+```
+
+## Installation (Developer)
+
+```bash
+conda env create -f scripts/conda-env.yml
+conda activate rpi-hardware-monitor-ros
+
+. scripts/source.sh
+colcon build --symlink-install --packages-select rpi_hw_monitor
 ```
 
 ## Todo
