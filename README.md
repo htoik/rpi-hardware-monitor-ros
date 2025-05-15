@@ -1,6 +1,7 @@
 # Hardware Monitor ROS2 Node for RPi4
 
-[![CI](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml/badge.svg)](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml)
+[![Latest Version](https://img.shields.io/github/release/htoik/rpi-hardware-monitor-ros.svg?style=flat-square&logo=GitHub)](https://github.com/htoik/rpi-hardware-monitor-ros/releases)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/htoik/rpi-hardware-monitor-ros/ci.yml?label=ci%20build&style=flat-square&logo=GitHub)](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml)
 
 This repository contains a hardware monitor node that provides statistics about hardware use such as CPU, RAM, disk and network utilization, power consumption and temperatures, which are published to the namespace `/hw_status`.
 
