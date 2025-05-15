@@ -18,5 +18,10 @@ jobs:
         with:
           environment-file: scripts/conda-env.yml
           activate-environment: rpi-hardware-monitor-ros
-      - run: pre-commit install --install-hooks
-      - run: pre-commit run --all-files --show-diff-on-failure
+      - name: Lint with pre-commit
+        shell: bash -l {0}
+        run: |
+          source "$CONDA/etc/profile.d/conda.sh"
+          conda activate rpi-hardware-monitor-ros
+          pre-commit install --install-hooks
+          pre-commit run --all-files --show-diff-on-failure
