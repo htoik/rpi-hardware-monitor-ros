@@ -12,7 +12,7 @@ from rpi_hw_monitor.msg import HardwareStatus
 class HardwareMonitor(Node):
     def __init__(self):
         super().__init__("hw_monitor")
-        self.declare_parameter("polling_frequency", 1)
+        self.declare_parameter("polling_frequency", 1.0)
         self.declare_parameter("cpu", True)
         self.declare_parameter("memory", True)
         self.declare_parameter("disk", True)
@@ -20,7 +20,7 @@ class HardwareMonitor(Node):
         self.declare_parameter("power", True)
         self.declare_parameter("temperature", True)
 
-        self.polling_frequency = self.get_parameter("polling_frequency").value
+        self.polling_frequency = 1.0 / self.get_parameter("polling_frequency").value
         self.monitor_flags = {
             "cpu": self.get_parameter("cpu").value,
             "memory": self.get_parameter("memory").value,
@@ -38,7 +38,7 @@ class HardwareMonitor(Node):
         self.timer = self.create_timer(self.polling_frequency, self.poll_hardware)
 
     def poll_hardware(self):
-        msg = HardwareMonitor()
+        msg = HardwareStatus()
 
         msg.cpu_usage = psutil.cpu_percent(interval=None)
 

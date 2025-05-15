@@ -1,6 +1,6 @@
-rpi_hw_monitor:
+hw_monitor:
   ros__parameters:
-    polling_frequency: 5
+    polling_frequency: 2.0
     cpu : true
     memory: true
     disk : true

@@ -12,17 +12,17 @@ git clone --recursive https://github.com/htoik/rpi-hardware-monitor-ros rpi-hard
 cd rpi-hardware-monitor-ros
 
 # conda (recommended)
-conda env create -f conda/environment.yml
+conda env create -f scripts/conda-env.yml
 conda activate rpi-hardware-monitor-ros
 
-colcon build --packages-select rpi-hardware-monitor-ros
+colcon build --packages-select rpi_hw_monitor
 ```
 
 ## Installation (Developer)
 
 ```bash
 . scripts/source.sh
-colcon build --symlink-install --packages-select rpi-hardware-monitor-ros
+colcon build --symlink-install --packages-select rpi_hw_monitor
 ```
 
 ## Configuration
@@ -57,3 +57,7 @@ ros2 launch rpi_hw_monitor hw_monitor_launch.py
 - load average
 
 - swap memory usage
+
+- connected devices
+
+- no. processes
