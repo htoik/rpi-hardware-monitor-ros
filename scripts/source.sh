@@ -26,4 +26,4 @@ if [ -d install/ ]; then
     source install/setup.sh
 fi
 
-export PYTHONPATH="${CONDA_PREFIX}/lib/python3.10/site-packages:$PYTHONPATH"
+export PYTHONPATH="${CONDA_PREFIX}/lib/python3.12/site-packages:$PYTHONPATH"

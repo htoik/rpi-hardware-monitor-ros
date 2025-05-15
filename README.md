@@ -32,14 +32,13 @@ The node can be configured to monitor specific hardware interfaces with addition
 ```yaml
 rpi_hw_monitor:
   ros__parameters:
-    monitor_flags:
-      cpu : true
-      memory: true
-      disk : true
-      network : true
-      power : true
-      temperature : true
     polling_frequency: 5 # (Hz)
+    cpu : true
+    memory: true
+    disk : true
+    network : true
+    power : true
+    temperature : true
 ```
 
 ## Usage
