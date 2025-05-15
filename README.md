@@ -1,4 +1,4 @@
-# Hardware Monitor ROS2 Node for RPi4
+# ROS2 Hardware Monitor Node for RPi4
 
 [![Latest Version](https://img.shields.io/github/release/htoik/rpi-hardware-monitor-ros.svg?style=flat-square&logo=GitHub)](https://github.com/htoik/rpi-hardware-monitor-ros/releases)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/htoik/rpi-hardware-monitor-ros/ci.yml?label=ci%20build&style=flat-square&logo=GitHub)](https://github.com/htoik/rpi-hardware-monitor-ros/actions/workflows/ci.yml)
