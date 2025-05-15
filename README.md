@@ -47,3 +47,13 @@ rpi_hw_monitor:
 ros2 run rpi_hw_monitor hw_monitor.py
 ros2 launch rpi_hw_monitor hw_monitor_launch.py
 ```
+
+## Todo
+
+- gpu stats
+
+- cpu frequency, voltage
+
+- load average
+
+- swap memory usage

@@ -25,3 +25,4 @@ dependencies:
       - flake8
       - ruff
       - mypy
+      - psutil
